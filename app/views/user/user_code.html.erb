@@ -1,10 +1,10 @@
 <div class="container">
-  <%= form_tag verify_user_path , :onsubmit => "return validateCode(#{@random_str});" , :class => 'form-signin', :id => 'form-code' do %>
+  <%= form_tag verify_user_path , :onsubmit => "return validateCode(#{@random_str});" , :class => 'form-input', :id => 'form-code' do %>
     <h2 class="form-signin-heading">Enter code sent on your number:</h2>
     <%= hidden_field_tag :code_sent, @random_str %>
     <%= label_tag 'Code', 'code', class:'sr-only' %>
-    <%= text_field_tag :code, nil, class:'form-control' %>
-    <%= submit_tag  :Confirm, class: 'btn btn-lg btn-primary btn-block'%>
+    <%= text_field_tag :code, nil, class:'form-control', :maxlength => 4 %>
+    <%= submit_tag  :Confirm, class: 'btn btn-lg btn-primary btn-block btn-margin'%>
 
   <% end %>
 </div>
