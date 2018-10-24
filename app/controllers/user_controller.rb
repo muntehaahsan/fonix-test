@@ -28,7 +28,17 @@ class UserController < ApplicationController
 
   #verify user code sent on mobile number
   def verify_user
-       redirect_to :root, alert: "Oops! You have entered invalid code"
+    root_redirection_alert("Oops! You have entered invalid code")
+  end
+
+  def show_warning
+    root_redirection_alert("Warning! You need to enter mobile number to get code")
+  end
+
+  private
+
+  def root_redirection_alert(msg)
+    redirect_to :root, alert: msg
   end
 
 end
