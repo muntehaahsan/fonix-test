@@ -14,22 +14,3 @@
 //= require turbolinks
 //= require_tree .
 
-function  validateCode(code_sent) {
-
-    var code_entered = document.getElementById('code').value;
-    if (code_sent.toString() == code_entered.toString())
-    {
-        //show sucess pop up
-        $('#myModal').modal('show');
-        return false;
-
-    }
-         else
-    {
-        //go to home page
-        document.getElementById("form-code").submit();
-    }
-
-    end
-
-}
